@@ -1,0 +1,40 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+long repeatedString(char* s, long n) {
+  long j =0;
+  long c = 0;
+  for(long i = 0;;){
+    if(j==n)
+      return c;
+    if(s[i] == '\0'){
+      i=0;
+    }
+    else{
+      if(s[i] == 'a')
+	c++;
+      i++;
+      j++;
+    }
+  }
+  return c;
+}
+
+int main(){
+
+  char *buffer = malloc(2);
+  char[0]='a';
+  char[1]='\0';
+  long n = 1000000000000;
+  printf("%d\n",repeatedString(buffer, n));
+    
+
+}
